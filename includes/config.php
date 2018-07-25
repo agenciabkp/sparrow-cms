@@ -10,5 +10,5 @@ if (empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'on'){
 require_once("vendor/autoload.php");
 
 //Carrega a configuração padrão para o sistema
-$config = new Interativa\Config();
+$config = new Sparrow\Config();
 ?>
