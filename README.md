@@ -1,10 +1,6 @@
-# atlantico.digital
+# Sparrow CMS
 
-Extranet com recursos para o cliente Atlântico manipular arquivos no Dropbox e acessar o sistema de Gestão de Pessoas.
-
-## Evolução
-
-Em decorrência da evolução de seus serviços e produtos, o Atlântico surge com este projeto para conectar experiências.
+Sparrow é um Sistema para Gerenciamento de Conteúdo, mais conhecido como CMS (Content Management System), o qual permite desenvolver simples websites.
 
 ## Pré-requisitos
 
@@ -20,7 +16,7 @@ Este projeto é desenvolvido em PHP 7.2.2 e possui os seguintes pré-requisitos:
     },
     "autoload": {
     	"psr-4": {
-    		"Interativa\\": "vendor\\interativa\\php-classes\\src"
+    		"Sparrow\\": "vendor\\sparrow-cms\\php-classes\\src"
     	}
     }
 
@@ -28,7 +24,7 @@ Este projeto é desenvolvido em PHP 7.2.2 e possui os seguintes pré-requisitos:
 ```
 ## Configuração
 
-Uma classe Config() deve ser criada em vendor/interativa/php-classes/src/ contendo os seguintes atributos:
+Uma classe Config() deve ser criada em vendor/sparrow-cms/php-classes/src/ contendo os seguintes atributos:
 
 ```
 class Config
