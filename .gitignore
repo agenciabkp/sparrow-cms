@@ -3,7 +3,7 @@
 _materiais/*
 _orig/*
 cache/*.php
-vendor/sparrow/php-classes/src/Config.php
+vendor/sparrow-cms/php-classes/src/Config.php
 info.php
 web.config
 .htaccess
