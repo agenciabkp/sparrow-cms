@@ -1,0 +1,30 @@
+{
+    "name": "Sparrow CMS",
+    "description": "Simple CMS",
+    "repositories":[
+        {
+            "type":"package",
+            "package":{
+                "name":"agenciabkp/sparrow-cms",
+                "version":"master",
+                "source":{
+                    "url":"git://github.com/agenciabkp/sparrow-cms.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        }
+    ],
+    "require": {
+        "slim/slim": "2.0",
+        "rain/raintpl": ">=3.0.0",
+        "phpmailer/phpmailer": "5.2.22",
+        "zurb/foundation": ">=6.4.3"
+    },
+    "autoload": {
+    	"psr-4": {
+    		"Sparrow\\": "vendor\\sparrow-cms\\php-classes\\src"
+    	}
+    }
+
+}
