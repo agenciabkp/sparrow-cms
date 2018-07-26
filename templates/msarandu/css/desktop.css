@@ -1,0 +1,36 @@
+
+@media only screen and (max-width: 1440px){	
+
+	/*****************
+		Content
+	*****************/
+
+	.content > .grid-x > .cell{
+		padding:140px;
+		padding-right: 40px;
+	}
+
+	/*****************
+		Grids
+	*****************/
+
+	.grid-icon > .cell{
+		padding:15px;
+	}
+
+	.grid-icon > .cell > span{
+		font-size: 40px;
+		margin-bottom: 15px;
+	}
+
+	.grid-image > .cell{
+		padding:200px 15px 15px 15px;
+	}
+
+	.grid-image > .cell > div{
+		height: 185px;
+		margin-bottom: 15px;
+		background-size: auto 185px;
+	}
+
+}

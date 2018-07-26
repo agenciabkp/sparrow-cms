@@ -1,0 +1,11 @@
+/*****************
+	Content
+*****************/
+
+.content > .grid-x > .cell{
+	padding:80px 40px 40px 40px;
+}
+
+header.grid-x, summary.grid-y{
+	display: none;
+}

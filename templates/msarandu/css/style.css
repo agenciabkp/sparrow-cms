@@ -32,6 +32,91 @@ hr{
 }
 
 /*****************
+	Header
+*****************/
+
+header{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	color: #FFF;
+}
+
+header .cell{
+	padding: 41px;
+}
+
+header .icon-simbolo_nospacing{
+	font-size: 65px;
+}
+
+header .icon-simbolo_nospacing.color{
+	color: #1C84C1;
+}
+
+
+/*****************
+	Summary
+*****************/
+
+summary{
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	color: #FFF;
+	text-align: center;
+}
+
+summary .cell{
+	padding: 65px;
+}
+
+summary .cell:first-of-type{
+	padding-bottom: 0;
+}
+
+summary .cell:last-of-type{
+	padding-top: 0;
+}
+
+summary .cell > div{
+	display: table;
+	height: 100%;
+}
+
+summary ul{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+summary ul > li{
+	width: 12px;
+	height: 12px;
+	border: 3px solid #FFF;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;	
+}
+
+summary ul > li.on{
+	background-color: #FFF;
+}
+
+summary ul > li.color{
+	border-color: #1C84C1;
+}
+
+summary ul > li.color.on{
+	background-color: #1C84C1;
+}
+
+/*****************
 	Home
 *****************/
 
@@ -69,6 +154,7 @@ hr{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: bottom center;
+	background-attachment: fixed;
 }
 
 /*****************
@@ -117,6 +203,7 @@ hr{
 
 .grid-icon > .cell > p{
 	margin-bottom: 0;
+	line-height: 16px;
 }
 
 /* Image */
@@ -166,10 +253,10 @@ hr{
 .grid-image > .cell > b{
 	color: #1C84C1;
 	padding:5px 0;
+	margin-right: 5px;
 }
 
 .grid-image > .cell > span{
-	margin-left: 5px;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
@@ -180,11 +267,13 @@ hr{
 
 .grid-image > .cell > p{
 	margin-bottom: 0;
+	line-height: 16px;
 }
 
 .grid-image > .cell > h2{
 	color: #303336;
 	margin-top: 20px;
+	line-height: 18px;
 }
 
 /* Logo */
@@ -318,4 +407,31 @@ textarea{
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
+	margin-top: 30px;
+}
+
+/*****************
+	Footer
+*****************/
+
+footer{
+	text-align: center;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+footer a{
+	color: #FFF;
+}
+
+footer a:hover{
+	color: #1C84C1;
+}
+
+footer.content.dark-background{
+	background-color: #05507D;
+}
+
+footer.content > .grid-x > .cell{
+	padding: 60px;
 }
