@@ -1,17 +1,37 @@
 
+function scrollTo(id){
+
+    if (id == "home"){
+        position = $("body").offset().top;
+    }else{
+        position = $('#'+id).offset().top;      
+    }
+    
+    jQuery('html, body').animate({ scrollTop: position }, 'slow');
+
+}
+
 /*****************
     Scroll Nav
 *****************/
 
 $( window ).scroll(function() {
 
-    var nav = $(".icon-simbolo_nospacing");
+    var nav = $('nav');
+    var orgElementTop = 70;
+
+    var icon = $(".icon-simbolo_nospacing");
     var summary = $("summary ul li");
 
-    var logoTop = nav.offset().top,
-        logoLeft = nav.offset().left,
-        logoWidth = nav.width(),
-        logoHeight = nav.height();                
+    var logoTop = icon.offset().top,
+        logoLeft = icon.offset().left,
+        logoWidth = icon.width(),
+        logoHeight = icon.height();  
+
+    var navTop = nav.offset().top,
+        navLeft = nav.offset().left,
+        navWidth = nav.width(),
+        navHeight = nav.height();                
 
     $('section').each(function(e){
         var self = $(this),
@@ -23,9 +43,18 @@ $( window ).scroll(function() {
         //Valida o logo
         if((logoLeft + logoWidth) > selfLeft && logoLeft < (selfLeft + selfWidth) && (logoTop + logoHeight) > selfTop && logoTop < (selfTop + selfHeight)){
             if(self.hasClass("background") || self.hasClass("dark-background")){
-                nav.removeClass("color");
+                icon.removeClass("color");
             }else{
-                nav.addClass("color");
+                icon.addClass("color");
+            }
+        }
+        
+        //Valida o navegação
+        if((navLeft + navWidth) > selfLeft && navLeft < (selfLeft + selfWidth) && (navTop + navHeight) > selfTop && navTop < (selfTop + selfHeight)){
+            if(self.hasClass("background") || self.hasClass("dark-background")){
+                nav.find(".main-nav").removeClass("color");
+            }else{
+                nav.find(".main-nav").addClass("color");
             }
         }
 
@@ -53,25 +82,69 @@ $( window ).scroll(function() {
         });
 
     });
+
+    if ($(this).scrollTop() >= orgElementTop) { 
+        nav.addClass("fixed");
+    } else if ($(this).scrollTop() < orgElementTop){ 
+        nav.removeClass("fixed");
+    } 
   
 });
 
-$("summary ul > li").click(function(){          
-    var id = $(this).attr("data-id"); 
+$(document).ready(function(){
 
-    scrollTo(id);
-    
-    return false;
+    var aside = $("aside .form");
+    var asideDefaultTop = parseInt(aside.css("top").replace("px",""));
+
+    $("aside .form > .header").click(function(){        
+        var operator = "-";
+        var top = aside.css("top").replace("px","");
+        var height = (parseInt(aside.height()) + asideDefaultTop) - parseInt($("aside").height());
+
+        //alert("Top: " + asideDefaultTop + " Height: " + height);
+
+        if(top < 0){
+            height = Math.abs(height);
+            operator = "+";
+        }
+
+        aside.animate({
+            top: operator + "=" + height + "px"
+        }, 200, function() {
+            aside.find(".header > span")
+                .toggleClass("icon-arrow-up")
+                .toggleClass("icon-arrow-down");
+        });
+        
+    });
+
+    $("summary ul > li").click(function(){          
+        var id = $(this).attr("data-id"); 
+
+        scrollTo(id);
+        
+        return false;
+    });
+
+    $(".main-nav > li > a").click(function(){          
+        var id = $(this).attr("href"); 
+
+        scrollTo(id);
+        
+        return false;
+    });
+
+    $(".icon-simbolo_nospacing").click(function(){
+
+        scrollTo("home");
+        
+        return false;
+    });
+
+    $(".icon-menu,.icon-x-circle").click(function(){
+        $(".main-nav").toggleClass("on");
+        $(".icon-menu").toggleClass("off");
+        $(".icon-x-circle").toggleClass("on");
+    });
+
 });
-
-function scrollTo(id){
-
-    if (id == "home"){
-        position = $("body").offset().top;
-    }else{
-        position = $('#'+id).offset().top;      
-    }
-    
-    jQuery('html, body').animate({ scrollTop: position }, 'slow');
-
-}

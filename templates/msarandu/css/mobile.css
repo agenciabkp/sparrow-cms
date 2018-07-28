@@ -1,11 +1,193 @@
+body{
+	font-size: 14px;
+}
+
+h1{ font-size: 55px; line-height: 41px; margin-bottom: 30px; }
+
+aside{
+	display: none;
+}
+
+p.cell-6{ width: 100%; }
+
+/*****************
+	Header
+*****************/
+
+header{
+	background-color: #1C84C1;
+	z-index: 3;
+}
+
+header > .cell{
+	padding: 21px;
+}
+
+header .icon-simbolo_nospacing{
+	font-size: 32px;
+}
+
+header .icon-menu,
+header .icon-x-circle{
+	float: right;
+	font-size: 32px;
+}
+
+header .icon-menu.off{
+	display: none;
+}
+
+header .icon-x-circle{
+	display: none;
+}
+
+header .icon-x-circle.on{
+	display: block;
+}
+
+/*****************
+	Nav
+*****************/
+
+nav{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+
+.featured-nav{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 78px;
+}
+
+.featured-nav > li.auto{
+	background-color: rgba(234,178,58,.95);
+}
+
+.featured-nav > li{
+	display: table-cell;
+	padding: 10px 5px;
+}
+
+.featured-nav > li > a{
+	font-size: 12px;
+	font-weight: 500;
+	color: #2A2F40;
+}
+
+.featured-nav > li:last-of-type > a{
+	border: none;
+}
+
+.main-nav{
+	display: none;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	z-index: 4;
+	top: 0;
+	right: 0;
+	background-color: #FFF;
+	padding: 120px 20px 50px 50px;
+}
+
+.main-nav.on{
+	display: table;
+}
+
+.main-nav > li{
+	display: block;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+.main-nav > li > a{
+	font-size: 18px;
+}
+
+.main-nav > li.close{
+	font-size: 32px;
+	text-align: right;
+	color: #1C84C1;
+	margin-bottom: 30px;
+}
+
+.main-nav > li.opt{
+	margin-top: 30px;
+}
+
+.main-nav > li.opt > a{
+	color: #C11C3E;
+}
+
+
+
 /*****************
 	Content
 *****************/
 
 .content > .grid-x > .cell{
-	padding:80px 40px 40px 40px;
+	padding:80px 20px 60px 20px;
 }
 
-header.grid-x, summary.grid-y{
+summary.grid-y{
 	display: none;
+}
+
+/*****************
+	Home
+*****************/
+
+.home .logotipo{
+	display: none;
+}
+
+.home > .grid-x > .cell{
+	width: 100%;
+}
+
+.home .background{
+	background-size: 1024px auto;
+}
+
+/*****************
+	Grids
+*****************/
+
+.grid-icon > .cell{
+	padding:15px;
+}
+
+.grid-icon > .cell > span{
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+
+.grid-image > .cell{
+	padding:200px 15px 15px 15px;
+}
+
+.grid-image > .cell > div{
+	height: 185px;
+	margin-bottom: 15px;
+	background-size: auto 185px;
+}
+
+/*****************
+	Nav
+*****************/
+
+nav > ul > li.shrink{
+	display: none;
+}
+
+
+@media only screen and (max-width: 520px){
+
+	.main-nav{
+		width: 75%;
+	}
+
 }

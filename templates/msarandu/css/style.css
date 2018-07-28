@@ -41,20 +41,39 @@ header{
 	left: 0;
 	top: 0;
 	color: #FFF;
+	z-index: 2;
 }
 
-header .cell{
-	padding: 41px;
-}
-
-header .icon-simbolo_nospacing{
-	font-size: 65px;
+header > .cell{
+	padding-right: 0;
 }
 
 header .icon-simbolo_nospacing.color{
 	color: #1C84C1;
 }
 
+/*****************
+	Nav
+*****************/
+
+nav{
+	position: absolute;
+	right: 0;
+	z-index: 2;
+}
+
+nav > ul > li{
+	text-align: center;
+}
+
+nav > ul > li > a{
+	text-transform: uppercase;
+	display: block;
+}
+
+nav.grid-container.fluid{
+	padding: 0;
+}
 
 /*****************
 	Summary
@@ -67,6 +86,7 @@ summary{
 	top: 0;
 	color: #FFF;
 	text-align: center;
+	z-index: 1;
 }
 
 summary .cell{
@@ -158,6 +178,18 @@ summary ul > li.color.on{
 }
 
 /*****************
+	Quem Somos
+*****************/
+
+#quem_somos{
+	background-image: url(../images/grid-simbolo.svg);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: right 100px;
+	background-attachment: fixed;
+}
+
+/*****************
 	Content
 *****************/
 
@@ -183,6 +215,12 @@ summary ul > li.color.on{
 /*****************
 	Grids
 *****************/
+
+.grid-icon > .cell,
+.grid-image > .cell,
+.grid-logo > .cell{
+	margin-bottom: 30px;
+}
 
 /* Icon */
 
@@ -216,7 +254,7 @@ summary ul > li.color.on{
 	cursor: pointer;
 	background-color: #FFF;
 	color: #7B8591;
-	position: relative;;
+	position: relative;
 }
 
 .grid-image > .cell > div{
