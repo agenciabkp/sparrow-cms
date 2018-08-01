@@ -27,8 +27,7 @@ header .icon-simbolo_nospacing{
 	font-size: 32px;
 }
 
-header .icon-menu,
-header .icon-x-circle{
+header .icon-menu{
 	float: right;
 	font-size: 32px;
 }
@@ -37,29 +36,26 @@ header .icon-menu.off{
 	display: none;
 }
 
-header .icon-x-circle{
-	display: none;
-}
-
-header .icon-x-circle.on{
-	display: block;
-}
-
 /*****************
 	Nav
 *****************/
 
 nav{
 	width: 100%;
-	height: 100%;
 	position: fixed;
+	z-index: 2;
+}
+
+nav.on{
+	z-index: 4;
+	height: 100%;
 }
 
 .featured-nav{
 	width: 100%;
 	position: absolute;
 	left: 0;
-	top: 78px;
+	top: 77px;
 }
 
 .featured-nav > li.auto{
@@ -90,7 +86,7 @@ nav{
 	top: 0;
 	right: 0;
 	background-color: #FFF;
-	padding: 120px 20px 50px 50px;
+	padding: 15px 20px 50px 50px;
 }
 
 .main-nav.on{
@@ -152,6 +148,24 @@ summary.grid-y{
 	background-size: 1024px auto;
 }
 
+.home .background > .icon-logotipo{
+	display: block;
+	text-align: center;
+	font-size: 120px;
+	margin-top: 160px;
+}
+
+/*****************
+	Quem Somos
+*****************/
+
+#quem_somos{
+	background-size: auto 320px;
+	background-position: center bottom;
+	background-attachment: inherit;
+	padding-bottom: 280px;
+	}
+
 /*****************
 	Grids
 *****************/
@@ -183,11 +197,100 @@ nav > ul > li.shrink{
 	display: none;
 }
 
+/*****************
+	Projeto
+*****************/
+
+.projeto.grid-x > .cell{
+	padding: 0;
+	padding-top: 130px;
+}
+
+.projeto > .cell > .grid-x > .cell{
+	padding: 20px;
+}
+
+.projeto .tags {
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+
+.projeto > .cell > .grid-x > .cell > ul > li{
+	padding: 10px;
+}
+
+.projeto h4,
+.projeto h5{
+	font-size: 25px;
+}
+
+.projeto h5{
+	background-color: rgba(0,0,0,.2);
+	padding: 10px;
+	margin: 20px 0;
+}
+
+.projeto .socials{
+	font-size: 20px;
+}
+
+.projeto > .cell > .grid-x > .cell > ul > li{
+	display: block;
+	width: 100%;
+}
+
+.projeto .content-background{
+	height: 350px;
+}
+
+
+/*****************
+	Gallery
+*****************/
+
+.gallery{
+	height: 480px;
+}
+
+.featured-items > .cell > .grid-x > .image{
+	height: 200px;
+}
+
 
 @media only screen and (max-width: 520px){
 
 	.main-nav{
 		width: 75%;
+	}
+
+	.home .background{
+		background-size: 720px auto;
+	}
+
+	
+	.home .background > .icon-logotipo{
+		margin-top: 200px;
+	}
+
+	/*****************
+		Projeto
+	*****************/
+
+	.projeto.grid-x > .cell{
+		padding-top: 145px;
+	}
+
+	.projeto > .cell > .grid-x > .cell{
+		padding: 5px;
+	}
+
+	/*****************
+		Gallery
+	*****************/
+
+	.gallery{
+		height: 380px;
+		border: 10px solid #FFF;
 	}
 
 }

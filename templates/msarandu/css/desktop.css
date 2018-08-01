@@ -11,8 +11,7 @@ header .icon-simbolo_nospacing{
 	cursor: pointer;
 }
 
-header .icon-menu,
-header .icon-x-circle{
+header .icon-menu{
 	display: none;
 }
 
@@ -26,7 +25,7 @@ aside{
 	bottom: 0;
 	left: 0;
 	background-color: rgba(234,178,58,.95);
-	z-index: 1;
+	z-index: 2;
 }
 
 aside > .grid-x > .cell{
@@ -81,6 +80,18 @@ aside .form input[type]{
 }
 
 /*****************
+	Home
+*****************/
+
+.home .background > .icon-logotipo{
+	display: none;
+}
+
+.home .background{
+	background-attachment: fixed;
+}
+
+/*****************
 	Nav
 *****************/
 
@@ -97,7 +108,8 @@ nav > ul > li > a{
 	border-right: 1px solid #27AFFF;
 }
 
-nav > ul > li:last-of-type > a{
+nav > ul > li:last-of-type > a,
+nav > ul > li.last > a{
 	border-right: none;
 }
 
@@ -118,7 +130,8 @@ nav > ul > li.auto{
 	background-color: #FFF;
 }
 
-.main-nav > li.opt{
+.main-nav > li.opt,
+.main-nav > li.close{
 	display: none;
 }
 
@@ -156,6 +169,80 @@ nav.fixed{
 nav.fixed > .featured-nav{
 	display: none;
 }
+
+nav.locked{
+	top: 47px;
+}
+
+nav.locked.fixed{
+	position: absolute;
+}
+
+nav.locked > .featured-nav,
+nav.locked.fixed > .featured-nav{
+	display: none;
+}
+
+/*****************
+	Projeto
+*****************/
+
+.projeto.grid-x > .cell{
+	padding: 200px 50px 0 150px;
+}
+
+.projeto > .cell > .grid-x > .cell{
+	-webkit-border-top-left-radius: 25px;
+	-webkit-border-top-right-radius: 25px;
+	-moz-border-radius-topleft: 25px;
+	-moz-border-radius-topright: 25px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+
+.projeto > .cell > .grid-x > .cell > ul > li{
+	display: table-cell;
+	width: 50%;
+	padding: 0 25px;
+	vertical-align: bottom;
+}
+
+.projeto .content-background{
+	height: 800px;
+	-webkit-border-top-left-radius: 25px;
+	-webkit-border-top-right-radius: 25px;
+	-moz-border-radius-topleft: 25px;
+	-moz-border-radius-topright: 25px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+
+
+/*****************
+	Gallery
+*****************/
+
+.featured-items > .cell > .grid-x > .border-left{
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}	
+
+.featured-items > .cell > .grid-x > .border-right{
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+/*****************
+	Summary
+*****************/
 
 @media only screen and (max-width: 1440px){
 
@@ -203,6 +290,31 @@ nav.fixed > .featured-nav{
 		background-size: auto 185px;
 	}
 
+	/*****************
+		Projeto
+	*****************/
+
+	.projeto.grid-x > .cell{
+		padding: 200px 50px 0 150px;
+	}
+
+	.projeto > .cell > .grid-x > .cell{
+		padding: 50px 25px 70px 25px;
+	}
+
+	.projeto .content-background{
+		height: 500px;
+	}
+
+
+	/*****************
+		Gallery
+	*****************/
+
+	.gallery{
+		height: 620px;
+	}
+
 }
 
 @media only screen and (max-width: 1366px){	
@@ -219,6 +331,11 @@ nav.fixed > .featured-nav{
 
 	nav{
 		width: 60%;
+	}
+
+	.projeto h4,
+	.projeto h5{
+		font-size: 35px;
 	}
 
 	/*****************

@@ -19,5 +19,65 @@
 	<link rel="stylesheet" type="text/css" href="/templates/msarandu/css/mobile.css" type="text/css" media="only screen and (max-width: 1023px)">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="/templates/msarandu/js/functions.js"></script>
 </head>
 <body>
+
+<header class="grid-x">
+    <div class="cell auto">
+        <span class="icon-simbolo_nospacing transition-all"></span>
+        <span class="icon-menu"></span>
+    </div>
+</header>
+
+<aside>
+    <div class="grid-x">
+        <div class="cell">
+            <span class="item">Compre agora! Ligue (11) 9999-9999</span>
+            <a href="javascript:contact('1');" class="item">Venda seu terreno</a>
+            <a href="javascript:contact('3');" class="item">Seja um investidor</a>
+
+            <ul class="form transition-all">
+                <li class="header">
+                    Central de vendas
+                    <span class="icon-arrow-up"></span>
+                </li>
+                <li>
+                    <div class="grid-x grid-padding-x">
+                        <div class="cell auto">
+                            Preencha seus dados que entraremos em contato com você o mais breve possível.<br><br>
+                            <div class="callout warning">
+                                <span class="icon-alert-triangle"></span> OPS! <span class="callout-text"></span>
+                            </div>
+                            <div class="callout success">
+                                <span class="icon-check"></span> Solicitação enviada com sucesso! Em breve entraremos em contato!
+                            </div>
+
+                            <input type="text" name="cv_nome" placeholder="Nome" data-required="Preencha corretamente seu nome.">
+                            <input type="text" name="cv_email" placeholder="E-mail" data-required="Digite corretamente seu e-mail para enviar a mensagem.">
+                            <input type="text" name="cv_telefone" placeholder="Telefone" data-required="Digite seu telefone para entrarmos em contato.">
+
+                            <a href="javascript:validaCentral();" class="button expanded rounded">Enviar</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
+
+<summary class="grid-y">
+    <div class="cell auto">
+        <div>
+            <ul>
+                <li class="on" data-id="home" title="Home"></li>
+                <li data-id="quem_somos" title="Quem Somos"></li>
+                <li data-id="servicos" title="Serviços"></li>
+                <li data-id="projetos" title="Projetos"></li>
+                <li data-id="parceiros" title="Parceiros"></li>
+                <li data-id="contato" title="Contato"></li>
+            </ul>
+        </div>
+    </div>
+</summary>

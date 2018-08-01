@@ -1,79 +1,10 @@
-<header class="grid-x">
-    <div class="cell auto">
-        <span class="icon-simbolo_nospacing transition-all"></span>
-        <span class="icon-menu"></span>
-        <span class="icon-x-circle"></span>
-    </div>
-</header>
-
-
-<nav>
-    <ul class="grid-x featured-nav">
-        <li class="cell shrink"><img src="templates/msarandu/images/nav-bg-top.png"></li>
-        <li class="cell auto"><a href="#">Venda seu terreno</a></li>
-        <li class="cell auto"><a href="#">Seja um investidor</a></li>
-        <li class="cell auto"><a href="#">Compre seu imóvel</a></li>
-    </ul>
-
-    <ul class="grid-x main-nav">
-        <li class="cell shrink"><img src="templates/msarandu/images/nav-bg-bottom.png"><img src="templates/msarandu/images/nav-bg-bottom-color.png" class="color"></li>
-        <li class="cell auto"><a href="quem_somos">Quem Somos</a></li>
-        <li class="cell auto"><a href="servicos">Serviços</a></li>
-        <li class="cell auto"><a href="projetos">Projetos</a></li>
-        <li class="cell auto"><a href="parceiros">Parceiros</a></li>
-        <li class="cell auto"><a href="contato">Contato</a></li>
-        <li class="cell opt"><a>Compre agora! Ligue <br>(11) 99999-9999</a></li>
-    </ul>
-</nav>
-
-<aside>
-    <div class="grid-x">
-        <div class="cell">
-            <span class="item">Compre agora! Ligue (11) 9999-9999</span>
-            <a href="#" class="item">Venda seu terreno</a>
-            <a href="#" class="item">Seja um investidor</a>
-
-            <ul class="form transition-all">
-                <li class="header">
-                    Central de vendas
-                    <span class="icon-arrow-up"></span>
-                </li>
-                <li>
-                    <div class="grid-x grid-padding-x">
-                        <div class="cell auto">
-                            Preencha seus dados que entraremos em contato com você o mais breve possível.<br><br>
-
-                            <input type="text" name="cv_nome" placeholder="Nome">
-                            <input type="text" name="cv_email" placeholder="E-mail">
-                            <input type="text" name="cv_telefone" placeholder="Telefone">
-
-                            <a href="#" class="button expanded rounded">Enviar</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</aside>
-
-<summary class="grid-y">
-    <div class="cell auto">
-        <div>
-            <ul>
-                <li class="on" data-id="home"></li>
-                <li data-id="quem_somos"></li>
-                <li data-id="servicos"></li>
-                <li data-id="projetos"></li>
-                <li data-id="parceiros"></li>
-                <li data-id="contato"></li>
-            </ul>
-        </div>
-    </div>
-</summary>
+{include="menu"}
 
 <section class="grid-container fluid home background" id="home">
     <div class="grid-x">
-        <div class="cell small-12 medium-6 large-6 background" style="background-image: url(templates/msarandu/images/slide-home/1.png);"></div>
+        <div class="cell small-12 medium-6 large-6 background" style="background-image: url('/templates/msarandu/images/slide-home/1.jpg');">
+            <span class="icon-logotipo" title="MS Arandu - Construtora e Incorporadora"></span>
+        </div>
         <div class="cell small-12 medium-6 large-6 logotipo">
             <span class="icon-logotipo" title="MS Arandu - Construtora e Incorporadora"></span>
         </div>
@@ -98,7 +29,7 @@
     <div class="grid-x">
         <div class="cell">
             
-            <h1>Serviços</h1>
+            <h1>Serviços {$query}</h1>
 
             <p>
             Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.
@@ -142,26 +73,26 @@
             </p><br><br>
 
             <div class="grid-x grid-margin-x grid-image">
-                <div class="cell small-12 medium-6 large-auto">
-                    <div class="transition-all" style="background-image: url(templates/msarandu/images/projeto.jpg);"></div>
+                <div class="cell small-12 medium-6 large-auto" onclick="window.location.href='/projeto/0/condominio-luxembourg'">
+                    <div class="transition-all" style="background-image: url('/templates/msarandu/images/projeto.jpg');"></div>
                     <b>construção</b> <span class="tag">Fase de Obras</span>
                     <h2>CONDOMÍNIO LUXEMBOURG</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>
                 </div>
-                <div class="cell small-12 medium-6 large-auto">
-                    <div class="transition-all" style="background-image: url(templates/msarandu/images/projeto.jpg);"></div>
+                <div class="cell small-12 medium-6 large-auto" onclick="window.location.href='/projeto/0/condominio-luxembourg'">
+                    <div class="transition-all" style="background-image: url('/templates/msarandu/images/projeto.jpg');"></div>
                     <b>construção</b> <span class="tag">Fase de Obras</span>
                     <h2>CONDOMÍNIO LUXEMBOURG</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>
                 </div>
-                <div class="cell small-12 medium-6 large-auto">
-                    <div class="transition-all" style="background-image: url(templates/msarandu/images/projeto.jpg);"></div>
+                <div class="cell small-12 medium-6 large-auto" onclick="window.location.href='/projeto/0/condominio-luxembourg'">
+                    <div class="transition-all" style="background-image: url('/templates/msarandu/images/projeto.jpg');"></div>
                     <b>construção</b> <span class="tag">Fase de Obras</span>
                     <h2>CONDOMÍNIO LUXEMBOURG</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>
                 </div>
-                <div class="cell small-12 medium-6 large-auto">
-                    <div class="transition-all" style="background-image: url(templates/msarandu/images/projeto.jpg);"></div>
+                <div class="cell small-12 medium-6 large-auto" onclick="window.location.href='/projeto/0/condominio-luxembourg'">
+                    <div class="transition-all" style="background-image: url('/templates/msarandu/images/projeto.jpg');"></div>
                     <b>construção</b> <span class="tag">Fase de Obras</span>
                     <h2>CONDOMÍNIO LUXEMBOURG</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>
@@ -169,26 +100,26 @@
             </div>
 
             <div class="grid-x grid-margin-x grid-image">
-                <div class="cell small-12 medium-6 large-auto">
-                    <div class="transition-all" style="background-image: url(templates/msarandu/images/projeto.jpg);"></div>
+                <div class="cell small-12 medium-6 large-auto" onclick="window.location.href='/projeto/0/condominio-luxembourg'">
+                    <div class="transition-all" style="background-image: url('/templates/msarandu/images/projeto.jpg');"></div>
                     <b>construção</b> <span class="tag">Fase de Obras</span>
                     <h2>CONDOMÍNIO LUXEMBOURG</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>
                 </div>
-                <div class="cell small-12 medium-6 large-auto">
-                    <div class="transition-all" style="background-image: url(templates/msarandu/images/projeto.jpg);"></div>
+                <div class="cell small-12 medium-6 large-auto" onclick="window.location.href='/projeto/0/condominio-luxembourg'">
+                    <div class="transition-all" style="background-image: url('/templates/msarandu/images/projeto.jpg');"></div>
                     <b>construção</b> <span class="tag">Fase de Obras</span>
                     <h2>CONDOMÍNIO LUXEMBOURG</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>
                 </div>
-                <div class="cell small-12 medium-6 large-auto">
-                    <div class="transition-all" style="background-image: url(templates/msarandu/images/projeto.jpg);"></div>
+                <div class="cell small-12 medium-6 large-auto" onclick="window.location.href='/projeto/0/condominio-luxembourg'">
+                    <div class="transition-all" style="background-image: url('/templates/msarandu/images/projeto.jpg');"></div>
                     <b>construção</b> <span class="tag">Fase de Obras</span>
                     <h2>CONDOMÍNIO LUXEMBOURG</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>
                 </div>
-                <div class="cell small-12 medium-6 large-auto">
-                    <div class="transition-all" style="background-image: url(templates/msarandu/images/projeto.jpg);"></div>
+                <div class="cell small-12 medium-6 large-auto" onclick="window.location.href='/projeto/0/condominio-luxembourg'">
+                    <div class="transition-all" style="background-image: url('/templates/msarandu/images/projeto.jpg');"></div>
                     <b>construção</b> <span class="tag">Fase de Obras</span>
                     <h2>CONDOMÍNIO LUXEMBOURG</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>
@@ -243,21 +174,40 @@
         <div class="cell">
             
             <h1>Entre em contato</h1>
+            <div class="callout warning">
+                <span class="icon-alert-triangle"></span> OPS! <span class="callout-text"></span>
+            </div>
+            <div class="callout success">
+                <span class="icon-check"></span> Mensagem enviada com sucesso! Em breve retornaremos seu contato.
+            </div>
 
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12 medium-12 large-6">
                     <div class="grid-x grid-margin-x">
-                        <div class="cell auto"><input type="text" name="nome" placeholder="Nome"></div>
-                        <div class="cell auto"><input type="text" name="telefone" placeholder="Telefone"></div>
+                        <div class="cell auto"><input type="text" name="nome" placeholder="Nome" data-required="Preencha corretamente o nome."></div>
+                        <div class="cell auto"><input type="text" name="telefone" placeholder="Telefone" data-required="Digite seu telefone para continuar."></div>
                     </div>
                     <div class="grid-x">
-                        <div class="cell auto"><input type="text" name="email" placeholder="E-mail"></div>
+                        <div class="cell auto"><input type="text" name="email" placeholder="E-mail" data-required="Digite corretamente seu e-mail para enviar a mensagem."></div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell auto">
+                            <select name="assunto">
+                                <option value="">< Assunto ></option>
+                                <option value="Quero vender meu terreno">Quero vender meu terreno</option>
+                                <option value="Quero investir">Quero investir</option>
+                                <option value="Quero comprar meu imóvel">Quero comprar meu imóvel</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="cell small-12 medium-12 large-6">
-                    <div class="grid-x grid-margin-x">
-                        <div class="cell large-10"><textarea name="coments">Comentários</textarea></div>
-                        <div class="cell large-2"><a href="#" class="button expanded icon rounded fluid-y"><span class="icon-send"></span></a></div>
+                    <div class="grid-x">
+                        <div class="cell auto"><textarea name="coments" placeholder="Comentários" data-required="Escreva sua mensagem nos comentários."></textarea></div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell auto"><a href="javascript:validaForm();" class="button expanded icon rounded fluid-y"><span class="icon-send"></span></a></div>
                     </div>
                 </div>
             </div>
@@ -292,8 +242,11 @@
       icon: iconBase + 'marker.png'
     });
   }
+$(document).ready(function(){
+  {if="$query>0"}
+    contact('{$query}');
+  {/if}
+});
 </script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP662Et7DE3PVlU1Kt7z2xZBnsqT2awHU&callback=initMap"></script>
-
-<script src="/templates/msarandu/js/script.js"></script>

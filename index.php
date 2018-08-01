@@ -15,13 +15,27 @@ $app->config('debug', true);
 
 $app->get('/', function() { 
 
-	$q = (isset($_GET["q"]) ? get("q") : "");
+	$q = (isset($_GET["q"]) ? $_GET["q"] : "");
 
 	$page = new Sparrow\Page();
 
 	$page->setTpl("index",array(
-		"q"=>$q
+		"page"=>"home",
+		"query"=>$q
 	));	
+
+});
+
+$app->get('/projeto/:id/:alias', function($id,$alias) {
+
+	$page = new Sparrow\Page();
+
+	$result = "";
+
+	$page->setTpl("projetos",array(
+		"page"=>"projeto",
+		"result"=>$result
+	));
 
 });
 
